@@ -1,0 +1,160 @@
+County,Circuit,POC *(Not Originally in Scope),Isolation Device,Customers De‐Energized,Reasons for De‐Energization,FPI Value,Trigger Percentage,Weather Station,Wind Sustained,Gust Sustained,Thresholds (Sustained/ Gust),Adjusted Triggers (Sustained/ Gust)
+Los Angeles,SAND CANYON,1/14 ‐ 1/15,RAR0191,9.0,Exceeded Threshold Exceeded FPI,12.53,168%,SCE Magic Mtn Truck Trl,47,59.7,31/46,28/41
+Los Angeles,CUTHBERT,1/14 ‐ 1/15,CB,2355.0,High Wind Trend Exceeded FPI,12.5,107%,SCE Escondido Canyon,30,39.3,31/46,28/41
+Los Angeles,CUTHBERT,1/14 ‐ 1/15,RAR8623,84.0,Exceeded Threshold Exceeded FPI,12.5,123%,SCE Ramirez Canyon,32.4,50.5,31/46,28/41
+Los Angeles,CUTHBERT,1/14 ‐ 1/15,RCS0036,498.0,Exceeded Threshold Exceeded FPI,12.5,116%,SCE Ramirez Canyon,32.6,46.3,31/46,28/41
+Los Angeles,DAVENPORT,1/14 ‐ 1/15,RAR0050,332.0,High Wind Trend Exceeded FPI,12.72,106%,SCE Letteau Canyon,26.1,43.5,31/46,28/41
+Los Angeles,LOUCKS,1/14 ‐ 1/15,RAR3431 (SHOVEL),55.0,Source Circuit De‐ Energized: Shovel,12.43,N/A,SCE Letteau Canyon,N/A,N/A,31/46,29/44
+Los Angeles,SHOVEL,1/14 ‐ 1/15,RAR3431,54.0,Exceeded Threshold Exceeded FPI,12.88,108%,SCE Letteau Canyon,26.1,43.5,25/40,23/36
+Los Angeles,PLATEAU,1/14 ‐ 1/15,RAR0051,188.0,High Wind Trend Exceeded FPI,12.63,105%,SCE Saddle Peak,29.3,42.5,31/46,28/41
+Los Angeles;Ventura,BIG ROCK,1/14 ‐ 1/15,PS0473,119.0,Exceeded Threshold Exceeded FPI,12.2,108%,SCE Cochran St,31.4,36.4,31/46,29/44
+Los Angeles;Ventura,ENERGY,1/14 ‐ 1/15,"GS1321‐4, GS7920‐1",854.0,Exceeded Threshold Exceeded FPI,12.2,115%,SCE Browns Canyon,33.3,45.7,31/46,29/44
+Los Angeles;Ventura,GUITAR,1/14 ‐ 1/15,RAR0402,42.0,Exceeded Threshold Exceeded FPI,12.66,111%,SCE Tapo Canyon,31.1,42.2,31/46,28/41
+Los Angeles;Ventura,ENERGY,1/14 ‐ 1/15,RAR0490,817.0,Exceeded Threshold Exceeded FPI,12.4,132%,SCE Cochran St,49.1,64.8,31/45,35/45
+Los Angeles;Ventura,BIG ROCK,1/14 ‐ 1/15,RCS0849‐2,2473.0,Exceeded Threshold Exceeded FPI,12.8,176%,SCE Browns Canyon,42,59.3,31/46,28/41
+Riverside,BLACKHILLS,1/14 ‐ 1/15,RSR2544,577.0,Exceeded Threshold Exceeded FPI,12.8,110%,SCE Thunder Ridge,31,42.89,31/46,28/41
+Riverside;San Bernardino,LARCH,1/14 ‐ 1/15,RCS0849,0.0,Exceeded Threshold Exceeded FPI,12.43,105%,SCE 25th Street,38,54,31/46,40/58
+Riverside;San Bernardino,CABANA,1/14 ‐ 1/15,CB,2365.0,Exceeded Threshold Exceeded FPI,12.8,99%,SCE Jurupa Hills,33.7,47.4,31/46,37/48
+San Bernardino,SWEETWATER,1/14 ‐ 1/15,RCS1451‐1,1267.0,Exceeded Threshold Exceeded FPI,13.44,99%,SCE Badger Canyon,38.54,53.2,31/46,40/54
+San Bernardino,NORTHPARK,1/14 ‐ 1/15,RAR0824,625.0,Exceeded Threshold Exceeded FPI,12.71,119%,SCE W Little League Dr,32.5,49,31/46,28/41
+San Bernardino,VARGAS,1/14 ‐ 1/15,RAR0828,394.0,Exceeded Threshold Exceeded FPI,13.52,118%,F0494 San Bernardino CSU SB,19,46,31/46,26/39
+San Bernardino,CALSTATE,1/14 ‐ 1/15,RAR0868,9.0,Exceeded Threshold Exceeded FPI,13.53,97%,SCE Devil Canyon,37,55.2,31/46,40/57
+Ventura,TAPO,1/14 ‐ 1/15,PS0046,0.0,Preemptive de‐ energization (No Load),N/A,N/A,N/A,N/A,N/A,N/A,N/A
+Ventura,TWIN LAKES,1/14 ‐ 1/15,RCS1756‐2,286.0,Exceeded Threshold Exceeded FPI,12.2,104%,SCE Cochran St,35.5,46.7,31/45,35/45
+Ventura,ANTON,1/14 ‐ 1/15,"RAR0217, RAR1992",139.0,Exceeded Threshold Exceeded FPI,12.7,145%,SCE Happy Camp Rd,40.6,55.8,31/46,28/41
+Ventura,TWIN LAKES,1/14 ‐ 1/15,RCS1756‐2,285.0,Exceeded Threshold Exceeded FPI,12.5,150%,SCE Cochran St,42,59.3,31/46,28/41
+Los Angeles,CALGROVE,1/14 ‐ 1/15*,RAR0071,24.0,Exceeded Threshold Exceeded FPI,12,109%,SCE Newhall Pass,31.6,43.6,31/46,29/44
+Los Angeles;Ventura,ENERGY,1/16 ‐ 1/17,RAR0490,824.0,Exceeded Threshold Exceeded FPI,12.5,101%,SCE Browns Canyon,31.4,45.7,31/46,28/41
+Ventura,ANTON,1/16 ‐ 1/17,"RAR0217, RAR1992",139.0,Exceeded Threshold Exceeded FPI,12.5,104%,SCE Happy Camp Rd,29.26,47.79,31/46,28/41
+Los Angeles,CALGROVE,1/16 ‐ 1/17*,RAR0071,24.0,Exceeded Threshold Exceeded FPI,12.7,102%,SCE Newhall Pass,30.1,46.9,31/46,28/41
+Ventura,BELPAC,1/16 ‐ 1/17*,CB,3211.0,Exceeded Threshold Exceeded FPI,12,104%,SCE N Wendy Dr,31.96,43.91,31/42.42,31/42
+Fresno;Madera,SAGINAW,1/18 ‐ 1/20,"CB at BC3, BC4",4.0,Exceeded Threshold Exceeded FPI,12.0,111%,SCE Redinger Lake Rd,15.6,44.6,24/40,24/40
+Kern,FROZEN,1/18 ‐ 1/20,CB,1.0,Preemptive: To coordinate with PG&E resources,12.7,61%,Grapevine Peak (RAWS) GVPC1,19.0,24.0,31/46,28/41
+Kern,GRAPEVINE PEAK,1/18 ‐ 1/20,PG&E FUSE#2447,4.0,Preemptive: To coordinate with PG&E resources,12.7,58%,Grapevine Peak (RAWS) GVPC1,19.0,24.0,31/46,33/47
+Kern,CONDOR,1/18 ‐ 1/20,RAR1573,322.0,High Wind Trend Exceeded FPI,13.1,108%,SCE Bear Mountain,22.8,44.4,31/46,28/41
+Kern,METTLER,1/18 ‐ 1/20,CB,526.0,High Wind Trend Exceeded FPI,12.7,98%,SCE Golden Valley,20.6,31.9,23/37,21/33
+Kern,CANEBRAKE,1/18 ‐ 1/20,RAR0630,121.0,High Wind Trend Exceeded FPI,12.2,102%,sce cANEBRAKE cREEK,29.6,41.1,31/46,29/44
+Kern,CONDOR,1/18 ‐ 1/20,RAR1542,331.0,High Wind Trend Exceeded FPI,13.1,108%,SCE Bear Mountain,22.8,44.4,31/46,28/41
+Kern,GNATCATCHER,1/18 ‐ 1/20,RAR6463,834.0,High Wind Trend Exceeded FPI,13.1,104%,SCE Caropolo Peak,21.41,42.45,31/46,28/41
+Kern,GNATCATCHER,1/18 ‐ 1/20,CB,619.0,High Wind Trend Exceeded FPI,13.1,108%,SCE Stallion Spring,29.0,44.21,31/46,28/41
+Kern,CONDOR,1/18 ‐ 1/20,CB,1099.0,Exceeded Threshold Exceeded FPI,13.1,125%,SCE Cummings Valley,35.0,51.4,31/46,28/41
+Los Angeles,SAND CANYON,1/18 ‐ 1/20,RAR0191,9.0,Exceeded Threshold Exceeded FPI,12.7,113%,SCE Magic Mtn Truck Trail,35.0,49.0,31/46,28/41
+Los Angeles,HILLFIELD,1/18 ‐ 1/20,CB,1613.0,Exceeded Threshold Exceeded FPI,12.6,106%,SCE Solemint Mtwy,31.4,48.8,31/46,32/45
+Los Angeles,COBRA,1/18 ‐ 1/20,CB,1712.0,High Wind Trend Exceeded FPI,12.6,101%,SCE Solemint Mtwy,26.7,40.5,31/42,31/40
+Los Angeles,LOUCKS,1/18 ‐ 1/20,RAR3431 (SHOVEL),55.0,Source Circuit De‐ Energized: Shovel,12.8,90%,SCE Letteau Canyon,23.6,36.9,31/46,28/41
+Los Angeles,SHOVEL,1/18 ‐ 1/20,RAR3431,54.0,High Wind Trend Exceeded FPI,12.8,90%,SCE Letteau Canyon,23.6,36.9,31/46,28/41
+Los Angeles,ARLENE,1/18 ‐ 1/20,CB,596.0,High Wind Trend Exceeded FPI,12.6,97%,SCE Solemint Mtwy,29.8,43.7,31/46,32/45
+Los Angeles,HILLFIELD,1/18 ‐ 1/20,CB,1615.0,High Wind Trend Exceeded FPI,12.6,97%,SCE Solemint Mtwy,29.8,43.7,31/46,32/45
+Los Angeles,RACER,1/18 ‐ 1/20,"BF59341, BF59097",723.0,High Wind Trend Exceeded FPI,12.6,97%,SCE Solemint Mtwy,29.8,43.7,31/46,32/45
+Los Angeles,JULIUS,1/18 ‐ 1/20,CB,3153.0,High Wind Trend Exceeded FPI,12.0,95%,SCE Solemint Mtwy,29.8,43.7,31/46,32/46
+Los Angeles,MARCUS,1/18 ‐ 1/20,CB,2042.0,High Wind Trend Exceeded FPI,12.0,95%,SCE Solemint Mtwy,29.8,43.7,31/46,32/46
+Los Angeles,SAND CANYON,1/18 ‐ 1/20,RAR0290,52.0,Exceeded Threshold Exceeded FPI,12.7,115%,SCE Mesa Grande Rd,22.4,47.1,31/46,28/41
+Los Angeles,DAVENPORT,1/18 ‐ 1/20,RAR0050,331.0,High Wind Trend Exceeded FPI,12.82,97%,SCE Letteau Canyon Rd,24.3,39.82,31/46,28/41
+Los Angeles,MOCCASIN,1/18 ‐ 1/20,CB,1442.0,Exceeded Threshold Exceeded FPI,12.6,109%,Saugus (SAUC1),29.0,49.0,31/46,31/45
+Los Angeles,TOGA,1/18 ‐ 1/20,CB,2119.0,Exceeded Threshold Exceeded FPI,12.0,117%,Saugus (SAUC1),29.0,49.0,31/41.7,32/42
+Los Angeles,ANACONDA,1/18 ‐ 1/20,RCS0119,1694.0,High Wind Trend Exceeded FPI,12.61,101%,SCE Golden Valley,22.19,40.33,31/42.4,31/40
+Los Angeles,CAESAR,1/18 ‐ 1/20,CB,1413.0,Exceeded Threshold Exceeded FPI,12.0,107%,Saugus (SAUC1),29.0,49.0,31/45.8,32/46
+Los Angeles,PICK,1/18 ‐ 1/20,CB,1005.0,High Wind Trend Exceeded FPI,12.82,109%,SCE Red Rover MIne,19.91,44.57,31/46,28/41
+Los Angeles,PYTHON,1/18 ‐ 1/20,RAR0066,1047.0,High Wind Trend Exceeded FPI,12.63,102%,SCE Oak Spring Canyon,25.9,41.72,31/46,28/41
+Los Angeles,PYTHON,1/18 ‐ 1/20,RAR0215,114.0,High Wind Trend Exceeded FPI,12.63,102%,SCE Oak Spring Canyon,25.9,41.72,31/46,28/41
+Los Angeles,RED BOX,1/18 ‐ 1/20,RAR9578,30.0,Exceeded Threshold Exceeded FPI,12.0,106%,SCE Union St,28.6,45.4,31/45,29/43
+Los Angeles,CLARINET,1/18 ‐ 1/20,RAR0297,15.0,Exceeded Threshold Exceeded FPI,12.0,109%,SCE Whitaker Ridge Rd,30.4,47.79,31/46,29/44
+Los Angeles,VETERANS,1/18 ‐ 1/20,RAR0117,21.0,High Wind Trend Exceeded FPI,12.7,105%,SCE Pacoima Dam,19.9,43.0,31/46,28/41
+Los Angeles,CALGROVE,1/18 ‐ 1/20,RAR0071,24.0,High Wind Trend Exceeded FPI,12.7,111%,SCE Newhall Pass,29.5,45.7,31/46,28/41
+Los Angeles,SAND CANYON,1/18 ‐ 1/20,CB,645.0,High Wind Trend Exceeded FPI,12.7,110%,SCE Oak Spring Canyon,22.5,44.9,31/46,28/41
+Los Angeles,DE MILLE,1/18 ‐ 1/20,RAR0081,243.0,Exceeded Threshold Exceeded FPI,13.5,115%,SCE East Trail,24.5,47.4,31/46,28/41
+Los Angeles,LOPEZ,1/18 ‐ 1/20,RAR0048,169.0,High Wind Trend Exceeded FPI,13.5,110%,SCE Kagel Canyon,23.8,45.1,31/46,28/41
+Los Angeles,CUTHBERT,1/18 ‐ 1/20,CB,76.0,Exceeded Threshold Exceeded FPI,12.5,105%,SCE Escondido Canyon,29.9,46.3,31/46,29/44
+Los Angeles,KINSEY,1/18 ‐ 1/20,RAR0302 AND RAR0452,18.0,Exceeded Threshold Exceeded FPI,12.93,148%,KSDB Sandberg,46.0,66.0,31/46,36/52
+Los Angeles,BOUQUET,1/18 ‐ 1/20,CB,757.0,Exceeded Threshold Exceeded FPI,12.8,122%,SCE Vasquez Canyon Rd,31.6,50.1,31/46,28/41
+Los Angeles,DAVENPORT,1/18 ‐ 1/20,CB,1121.0,Exceeded Threshold Exceeded FPI,12.8,122%,SCE Vasquez Canyon Rd,31.6,50.1,31/46,28/41
+Los Angeles,ESCONDIDO,1/18 ‐ 1/20,CB,0.0,Source Circuit De‐ energized: DAVENPORT,12.8,122%,SCE Vasquez Canyon Rd,31.6,50.1,31/46,28/41
+Los Angeles,TUBA,1/18 ‐ 1/20,RAR0225,25.0,Exceeded Threshold Exceeded FPI,12.5,115%,SCE Castiac Lake,29.6,55.2,31/46,34/45
+Los Angeles,DIAMONDBACK,1/18 ‐ 1/20,RCS6485‐1,2.0,Exceeded Threshold Exceeded FPI,12.6,103%,SCE Macron St,28.6,43.1,31/42,33/42
+Los Angeles,LYONS,1/18 ‐ 1/20,CB,3718.0,High Wind Trend Exceeded FPI,12.6,96%,SCE Whitney Canyon Pass,20.4,39.5,31/46,28/41
+Los Angeles;Ventura,ENERGY,1/18 ‐ 1/20,"GS1321‐4, GS7920‐1",46.0,Exceeded Threshold Exceeded FPI,12.5,100%,SCE Oat Mountain,28.5,46.0,31/46,28/41
+Los Angeles;Ventura,GUITAR,1/18 ‐ 1/20,RAR0402,42.0,High Wind Trend Exceeded FPI,12.65,108%,SCE Tapo Canyon,27.35,44.35,31/46,28/41
+Los Angeles;Ventura,ENERGY,1/18 ‐ 1/20,RAR0012,37.0,Exceeded Threshold Exceeded FPI,12.5,100%,SCE Oat Mountain,28.5,46.0,31/46,28/41
+Los Angeles;Ventura,BIG ROCK,1/18 ‐ 1/20,PS0473,119.0,High Wind Trend Exceeded FPI,12.45,101%,SCE Cochran St,29.17,41.94,31/46,29/44
+Los Angeles;Ventura,ENERGY,1/18 ‐ 1/20,RAR0490,817.0,Exceeded Threshold Exceeded FPI,12.5,117%,SCE Santa Susana Pass Rd,25.8,48.1,31/46,28/41
+Los Angeles;Ventura,GUITAR,1/18 ‐ 1/20,CB,215.0,High Wind Trend Exceeded FPI,12.7,106%,SCE Walcatt Way,29.1,43.3,31/46,28/41
+Orange,VERA CRUZ,1/18 ‐ 1/20,RAR0870,5.0,Exceeded Threshold Exceeded FPI,12.3,110%,SCE Carbon Canyon,30.7,48.3,28/42,29/44
+Orange,GREEN RIVER,1/18 ‐ 1/20,CB,2013.0,Exceeded Threshold Exceeded FPI,12.4,128%,SCE Santa Ana River Rd,30.0,51.3,31/40,31/40
+Orange,STAR ROCK,1/18 ‐ 1/20,CB,1395.0,Exceeded Threshold Exceeded FPI,12.4,117%,SCE Santa Ana River Bikeway,30.0,51.3,31/44,31/44
+Riverside,BLACKHILLS,1/18 ‐ 1/20,RCS2491,930.0,Exceeded Threshold Exceeded FPI,12.5,111%,SCE Thunder Ridge,32.1,47.1,31/46,29/44
+Riverside,DUKE,1/18 ‐ 1/20,RAR0534,22.0,High Wind Trend Exceeded FPI,12.3,100%,SCE Mount Davis,26.3,42.8,30/46,29/43
+Riverside,STAGHORN,1/18 ‐ 1/20,CB,1165.0,Exceeded Threshold Exceeded FPI,12,99%,SCE Jurupa  Hills,29.9,49.3,31/46,39/50
+Riverside,GALENA,1/18 ‐ 1/20,RSR6282,996.0,Exceeded Threshold Exceeded FPI,12.5,104%,SCE Thunder Ridge,37.7,59.6,31/46,39/57
+Riverside,SAVORY,1/18 ‐ 1/20,RCS0094,55.0,Exceeded Threshold Exceeded FPI,12.5,149%,SCE Romana‐Hwy 79,43.3,63.3,29/42,29/44
+Riverside,STEEL,1/18 ‐ 1/20,RAR1637,37.0,Exceeded Threshold Exceeded FPI,12.6,124%,SCE Ramona‐Hwy 79,32.1,51,30/43,29/41
+Riverside,NAPOLEON,1/18 ‐ 1/20,RAR0932,45.0,Exceeded Threshold Exceeded FPI,12,105%,SCE Lamb Canyon Landfall,29.8,45.1,31/45,29/43
+Riverside,EASTER,1/18 ‐ 1/20,RAR7453,44.0,Exceeded Threshold Exceeded FPI,12,138%,SCE Ramona‐Hwy79,32,53.9,29/41,27/39
+Riverside,TAHQUITZ,1/18 ‐ 1/20,RAR0141,137.0,Exceeded Threshold Exceeded FPI,12,112%,SCE Keen Ridge,32.6,48.2,31/46,29/44
+Riverside,DARTMOUTH,1/18 ‐ 1/20,CB,1360.0,Exceeded Threshold Exceeded FPI,12,115%,SCE Soboba Rd,24.5,48.4,31/45,28/42
+Riverside,FORTUNE,1/18 ‐ 1/20,CB,0.0,Source Circuit De‐ Energized: Lauda,12,122%,SCE State St,30,51.4,31/45,29/42
+Riverside,GILMAN,1/18 ‐ 1/20,CB,18.0,Source Circuit De‐ Energized: Lauda,12,122%,SCE State St,30,51.4,31/45,29/42
+Riverside,LAUDA,1/18 ‐ 1/20,RAR1665,0.0,Exceeded Threshold Exceeded FPI,12,122%,SCE State St,30,51.4,31/45,29/42
+Riverside,CORSAIR,1/18 ‐ 1/20,RAR0284,253.0,Exceeded Threshold Exceeded FPI,12,128%,SCE Red Mountain Rd,35.7,50,30/42,28/40
+Riverside,BING,1/18 ‐ 1/20,CB,2356.0,Exceeded Threshold Exceeded FPI,12,103%,SCE Elm Ave,31.7,46.3,31/45,32/45
+Riverside,HONEYCRISP,1/18 ‐ 1/20,CB,807.0,Exceeded Threshold Exceeded FPI,12,107%,SCE San Timoteo Canyon,28.9,42.5,29/42,27/40
+Riverside,PHEASANT,1/18 ‐ 1/20,RAR0272,177.0,Exceeded Threshold Exceeded FPI,12,128%,Banning (RAWS) BNJC1,37,51,31/45,29/43
+Riverside,JONAGOLD,1/18 ‐ 1/20,RCS2293‐1,1059.0,Exceeded Threshold Exceeded FPI,12,116%,SCE Union St,28.6,45.4,28/39,28/39
+Riverside,SCHMIDT,1/18 ‐ 1/20,CB,1411.0,Exceeded Threshold Exceeded FPI,12,108%,SCE union St,28.6,45.4,31/44,29/42
+Riverside,CORSAIR,1/18 ‐ 1/20,RAR0179,225.0,Exceeded Threshold Exceeded FPI,12,130%,SCE Brown Canyon,35.4,52.1,30/42,28/40
+Riverside;San Bernardino,CABANA,1/18 ‐ 1/20,CB,2366.0,Exceeded Threshold Exceeded FPI,12.4,97%,SCE Jurupa  Hills,29.9,49.3,31/46,39/51
+Riverside;San Bernardino,LARCH,1/18 ‐ 1/20,CB,3.0,Exceeded Threshold Exceeded FPI,12.5,103%,SCE 25th St,41.2,56.3,31/46,40/58
+Riverside;San Bernardino,CONINE,1/18 ‐ 1/20,RSR0661,788.0,Exceeded Threshold Exceeded FPI,12,122%,SCE Roberts Rd,31,46.3,28/40,27/38
+Riverside;San Bernardino,MACIEL,1/18 ‐ 1/20,RCS3829‐4,52.0,Exceeded Threshold Exceeded FPI,12.5,113%,SCE Chino Hills 3,29.5,42.1,28/42,26/40
+Riverside;San Diego,CHAWA,1/18 ‐ 1/20,CB,1185.0,High Wind Trend Exceeded FPI,12,106%,SCE Anza Rd,30.9,44.9,31/46,29/43
+San Bernardino,TWIN PEAKS,1/18 ‐ 1/20,RCS1487,0.0,Preemptive de‐ energization (No load),N/A,N/A,N/A,N/A,N/A,N/A,N/A
+San Bernardino,VARGAS,1/18 ‐ 1/20,RAR0828,394.0,High Wind Trend Exceeded FPI,12.5,98%,F0494 San Bernardino CSU SB,21,40,31/46,28/41
+San Bernardino,ACOSTA,1/18 ‐ 1/20,RAR0800,5.0,Exceeded Threshold Exceeded FPI,13.8,100%,SCE Bullock Spur,23.4,46.1,31/46,32/46
+San Bernardino,IMPALA,1/18 ‐ 1/20,BLF30156 & PS0552,766.0,Exceeded Threshold Exceeded FPI,12.5,95%,SCE Lyte Creek Rd,29.7,55.2,31/46,38/58
+San Bernardino,AVANTI,1/18 ‐ 1/20,RAR0989,69.0,Exceeded Threshold Exceeded FPI,12.4,95%,SCE W Little League Dr,32.9,55,31/46,40/58
+San Bernardino,SWEETWATER,1/18 ‐ 1/20,RCS1451‐1,1266.0,Exceeded Threshold Exceeded FPI,12.5,99%,SCE Badger Canyon,33.4,49.8,31/46,40/57
+San Bernardino,CALSTATE,1/18 ‐ 1/20,RAR0868,9.0,Exceeded Threshold Exceeded FPI,12.5,97%,SCE Devil Canyon,37.6,56.3,31/46,40/58
+San Bernardino,ECHO,1/18 ‐ 1/20,RAR0826,118.0,High Wind Trend Exceeded FPI,13.7,115%,SCE Arrowhead Springs Rd,29.5,44.7,31/46,26/39
+San Bernardino,BADGER,1/18 ‐ 1/20,RCS4207‐5,1250.0,Exceeded Threshold Exceeded FPI,12.5,96%,SCE Buena Vis,36.7,53.9,31/46,40/56
+San Bernardino,VERDEMONT,1/18 ‐ 1/20,RAR0805,3.0,Exceeded Threshold Exceeded FPI,12.5,98%,SCE W Little League Dr,37.7,56.9,31/46,40/58
+San Bernardino,CARMELITA,1/18 ‐ 1/20,CB,2404.0,Exceeded Threshold Exceeded FPI,13.7,104%,San Bernardino SCUBA,29,59,31/46,39/57
+San Bernardino,NORTHPARK,1/18 ‐ 1/20,CB to OPEN RAR0824,479.0,Exceeded Threshold Exceeded FPI,12.5,118%,DEVORE (DVOC1),32,52,31/46,29/44
+Ventura,BELPAC,1/18 ‐ 1/20,CB,3204.0,Exceeded Threshold Exceeded FPI,12.6,102%,SCE N Wendy Dr,30.9,43.1,31/42,31/40
+Ventura,YOSEMITE,1/18 ‐ 1/20,PH1401236E,33.0,Preemptive: to coordinate with hospital,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+Ventura,ANTON,1/18 ‐ 1/20,RAR0217,119.0,High Wind Trend Exceeded FPI,12.5,99%,SCE Happy Camp Rd,25.2,40.4,31/46,28/41
+VENTURA,ANTON,1/18 ‐ 1/20,RAR1992,20.0,High Wind Trend Exceeded FPI,12.5,99%,SCE Happy Camp Rd,25.2,40.4,31/46,28/41
+Ventura,BALCOM,1/18 ‐ 1/20,RCS1127,359.0,High Wind Trend Exceeded FPI,12.4,97%,SCE South Mountain,28.1,38,31/46,29/44
+Ventura,RAINBOW,1/18 ‐ 1/20,RAR1941,18.0,High Wind Trend Exceeded FPI,12.5,97%,SCE South Mountain,28.1,38,31/46,29/44
+Ventura,TAPO,1/18 ‐ 1/20,RAR6509,57.0,High Wind Trend Exceeded FPI,12.64,102%,SCE Iron Trough Canyon,19.3,41.72,31/46,28/41
+Ventura,CASTRO,1/18 ‐ 1/20,RAR0179,224.0,Exceeded Threshold Exceeded FPI,12.41,112%,SCE Anlauf Canyon,28.5,49.17,29.8/46,28/44
+Ventura,ESTABAN,1/18 ‐ 1/20,RAR9580,156.0,High Wind Trend Exceeded FPI,13.4,108%,SCE Hondo Barranca Rd,21.6,43.26,31/44.8,28/40
+Ventura,BUCKHORN,1/18 ‐ 1/20,RAR0403,84.0,Exceeded Threshold Exceeded FPI,12.49,106%,SCE Santa Felicia Canyon Rd,17.7,46.47,31/46,29/44
+Ventura,TIMBER CANYON,1/18 ‐ 1/20,RAR0255,42.0,High Wind Trend Exceeded FPI,12.5,104%,SCE Toland Park,26.6,45.7,31/46,29/44
+Ventura,ANGUS,1/18 ‐ 1/20,RAR3737,89.0,Exceeded Threshold Exceeded FPI,12.4,105%,SCE Toland Park,28.8,46,31/46,29/44
+Ventura,ZONE,1/18 ‐ 1/20,RAR0475,55.0,Exceeded Threshold Exceeded FPI,12.5,105%,SCE Long Canyon,28.7,46.3,31/46,29/44
+Ventura,RICARDO,1/18 ‐ 1/20,RAR0141,531.0,Exceeded Threshold Exceeded FPI,12.4,126%,SCE Crimea Street Fire Rd,31.1,55.3,31/46,29/44
+Ventura,RAINBOW,1/18 ‐ 1/20,RAR2137,159.0,Exceeded Threshold Exceeded FPI,12.5,106%,SCE Somis,23.0,46.7,31/46,29/44
+Ventura,ZONE,1/18 ‐ 1/20,CB,891.0,Exceeded Threshold Exceeded FPI,12.5,106%,SCE Somis,23.0,46.7,31/46,29/44
+Ventura,AMBERCREST,1/18 ‐ 1/20,CB,1819.0,Exceeded Threshold Exceeded FPI,12.4,106%,SCE Thousand Oaks,29.5,46.8,31/44,36/44
+Ventura,HAMPSHIRE,1/18 ‐ 1/20,CB,3092.0,Exceeded Threshold Exceeded FPI,12.4,109%,SCE Thousand Oaks,29.5,46.8,31/45,29/43
+Ventura,HILLCREST,1/18 ‐ 1/20,CB,2131.0,Exceeded Threshold Exceeded FPI,12.6,136%,SCE Thousand Oaks,34.6,50.3,31/45,26/37
+Ventura,GOLDSMITH,1/18 ‐ 1/20,CB,3068.0,Exceeded Threshold Exceeded FPI,13.1,102%,SCE Thousand Oaks,29.5,46.8,31/45,29/46
+Ventura,LANGER,1/18 ‐ 1/20,CB,1710.0,Exceeded Threshold Exceeded FPI,12.4,109%,SCE Thousand Oaks,29.5,46.8,31/45,29/43
+Ventura,CASSIDY,1/18 ‐ 1/20,RCS1246‐2,190.0,Exceeded Threshold Exceeded FPI,12.5,99%,SCEGuardian St Hills,29.1,49.3,31/46,35/49
+Ventura,ANTON,1/18 ‐ 1/20,RAR0621,138.0,Exceeded Threshold Exceeded FPI,12.5,122%,SCE Rifleman Rd,24.8,50.1,31/46,28/41
+Ventura,ENCHANTED,1/18 ‐ 1/20,CB,374.0,Exceeded Threshold Exceeded FPI,12.5,102%,SCE Simi Valley Landfill,29.4,53.2,31/46,36/52
+Ventura,MIDDLE ROAD,1/18 ‐ 1/20,CB,414.0,Exceeded Threshold Exceeded FPI,12.7,140%,SCE Santa Paula,24.0,46.2,26/42,21/33
+Ventura,ESTABAN,1/18 ‐ 1/20,RAR7446,93.0,Exceeded Threshold Exceeded FPI,13.4,130%,SCE El Rio,28.2,51.8,31/45,28/40
+Ventura,MORGANSTEIN,1/18 ‐ 1/20,RAR1360,643.0,Exceeded Threshold Exceeded FPI,12.5,111%,SCE Simi Valley 2,27.4,48.7,31/46,29/44
+Ventura,ROSA,1/18 ‐ 1/20,RCS3452‐2,761.0,Exceeded Threshold Exceeded FPI,12.1,104%,SCE las Posas Hills,32.1,49.9,31/46,31/53
+Ventura,DONLON,1/18 ‐ 1/20,RAR3474,38.0,Exceeded Threshold Exceeded FPI,12.5,100%,SCE Las Posas Hills,32.1,49.9,31/46,32/54
+Ventura,WHITECLIFF,1/18 ‐ 1/20,RCS5414‐3,2777.0,Exceeded Threshold Exceeded FPI,12.4,98%,SCE Thousand Oaks,34.2,48.0,31/46,35/51
+Ventura,DONLON,1/18 ‐ 1/20,RAR0011,146.0,Exceeded Threshold Exceeded FPI,12.5,100%,SCE Somis,30.0,54.1,31/46,31/54
+Ventura,DONLON,1/18 ‐ 1/20,CB,346.0,Exceeded Threshold Exceeded FPI,12.5,93%,SCE Orchard Rd,23.5,50.3,31/46,31/54
+Ventura,BUCKNER,1/18 ‐ 1/20,CB,2302.0,Exceeded Threshold Exceeded FPI,12.4,127%,SCE Simi‐Third St,28.7,54.6,31/45,29/43
+Ventura,ERRINGER,1/18 ‐ 1/20,CB,3063.0,Exceeded Threshold Exceeded FPI,12.5,127%,SCE Simi‐Third St,28.7,54.6,31/45,29/43
+Ventura,EVERETT,1/18 ‐ 1/20,CB,2051.0,Exceeded Threshold Exceeded FPI,12.1,125%,SCE Moorpark College,31.7,61.2,31/46,34/49
+Ventura,STRATHERN,1/18 ‐ 1/20,CB,3088.0,Exceeded Threshold Exceeded FPI,12.4,139%,SCE Moorpark College,31.7,61.2,31/46,29/44
+Ventura,COVENTRY,1/18 ‐ 1/20,RAR1055,649.0,Exceeded Threshold Exceeded FPI,12.6,132%,SCE Los Robles Trail,28.7,47.4,31/46,25/36
+Ventura,SHERWOOD,1/18 ‐ 1/20,CB,65.0,Source Circuit De‐ Energized: Coventry,12.6,132%,SCE Los Robles Trail,28.7,47.4,31/46,25/36
+Ventura,WHITECLIFF,1/18 ‐ 1/20,CB,879.0,Exceeded Threshold Exceeded FPI,12.42,98%,SCE Thousand Oaks,34.2,48.0,31/46,35/51
+Riverside,ACCENT,1/18 ‐ 1/20*,CB,1584.0,High Wind Trend Exceeded FPI,12.0,100%,SCE Redlands Blvd,26.3,37.9,27/38,27/38
