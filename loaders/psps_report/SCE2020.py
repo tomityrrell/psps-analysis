@@ -17,8 +17,9 @@ file_pages = {
 'SCE Sept 5-11 2020 PSPS Post Event Report.pdf' :   '12',
 }
 
+os.chdir(input_path)
 file_tables = {}
-for filename in filter(lambda s: s.endswith(".pdf"), os.listdir()):
+for filename in file_pages:
     tables = tabula.read_pdf("{}{}".format(input_path, filename), lattice=True, pages=file_pages[filename])
     file_tables[filename] = list(filter(lambda d: len(d.columns) > 10, tables))
 

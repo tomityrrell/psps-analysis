@@ -1,4 +1,5 @@
 import tabula
+import os
 import pandas as pd
 
 input_path = "../../data/2021/"
@@ -9,7 +10,8 @@ file_pages = {
     filename: "23-34"
 }
 
-tables = tabula.read_pdf(input_path, lattice=True, pages='23-34')
+os.chdir(input_path)
+tables = tabula.read_pdf(input_path+filename, lattice=True, pages='23-34')
 
 deenergization = pd.concat(tables[:6])
 decision = pd.concat(tables[6:])
@@ -31,6 +33,6 @@ for k in frames:
     frames[k]["days"] = filename.split(" ")[2]
     frames[k]["year"] = filename.split(" ")[3]
 
-    frames[k].to_csv("{}{}.csv".format(output_path, k), index=False)
+    frames[k].to_csv("{}{}_2021.csv".format(output_path, k), index=False)
 
 
