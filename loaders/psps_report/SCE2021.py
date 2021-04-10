@@ -1,8 +1,13 @@
 import tabula
 import pandas as pd
 
-input_path = "../data/2021/"
-output_path = "../data/2021/"
+input_path = "../../data/2021/"
+output_path = "../../data/2021/"
+
+filename = "SCE Jan 12-21 2021 SCE PSPS Post Event Report.pdf"
+file_pages = {
+    filename: "23-34"
+}
 
 tables = tabula.read_pdf(input_path, lattice=True, pages='23-34')
 
@@ -21,6 +26,11 @@ for k in frames:
     frames[k].replace('\r', ' ', regex=True, inplace=True)
     frames[k].reset_index(drop=True, inplace=True)
     frames[k].columns = columns[k]
+
+    frames[k]["month"] = filename.split(" ")[1]
+    frames[k]["days"] = filename.split(" ")[2]
+    frames[k]["year"] = filename.split(" ")[3]
+
     frames[k].to_csv("{}{}.csv".format(output_path, k), index=False)
 
 

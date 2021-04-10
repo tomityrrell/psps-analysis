@@ -2,10 +2,9 @@ import tabula
 import pandas as pd
 import os
 
-input_path = "../data/2020/"
-output_path = "../data/2020/"
+input_path = "../../data/2020/"
+output_path = "../../data/2020/"
 
-file_tables = {}
 file_pages = {
 'SCE Dec 16-24 2020 PSPS Post Event Report.pdf' :   '16-19',
 'SCE Dec 4-14 PSPS Post Event Report.pdf' :         '20-26',
@@ -17,13 +16,15 @@ file_pages = {
 'SCE Oct 23-28 2020 PSPS Post Event Report.pdf' :   '15-19',
 'SCE Sept 5-11 2020 PSPS Post Event Report.pdf' :   '12',
 }
+
+file_tables = {}
 for filename in filter(lambda s: s.endswith(".pdf"), os.listdir()):
     tables = tabula.read_pdf("{}{}".format(input_path, filename), lattice=True, pages=file_pages[filename])
     file_tables[filename] = list(filter(lambda d: len(d.columns) > 10, tables))
 
 decision_columns = ["Circuit", "Weather Station", "Wind Sustained", "Gust Sustained", "Thresholds (Sustained/ Gust)", "FPI Value", "Reasons for De-Energization"]
-file_frames = {}
 
+file_frames = {}
 # post processing filtering
 for filename in filter(lambda s: s.endswith(".pdf"), os.listdir()):
     for df in file_tables[filename]:
@@ -45,6 +46,8 @@ for filename in filter(lambda s: s.endswith(".pdf"), os.listdir()):
 
     file_frames[filename] = pd.concat(file_tables[filename])
     file_frames[filename]["month"] = filename.split(" ")[1]
+    file_frames[filename]["days"] = filename.split(" ")[2]
+    file_frames[filename]["year"] = filename.split(" ")[3]
 
 decision = pd.concat(file_frames.values())
-decision.to_csv("decision.csv", index=False)
+decision.to_csv("decision_2020.csv", index=False)

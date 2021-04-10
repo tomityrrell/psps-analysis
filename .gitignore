@@ -1,2 +1,5 @@
-report_reader/venv/
-report_reader/.idea/
+/loaders/psps_report/venv/*
+/loaders/psps_report/.idea/*
+.idea/*
+/loaders/weather_station/cimis_api_key
+.DS_Store
