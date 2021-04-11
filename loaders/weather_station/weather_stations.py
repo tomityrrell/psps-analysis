@@ -3,8 +3,7 @@ import json
 
 import pandas as pd
 
-with open('cimis_api_key', 'r') as f:
-    appKey = f.readline()
+from cimis_api_key import appKey
 
 address = "https://et.water.ca.gov/api/station?appKey={}"
 res = requests.get(address.format(appKey))

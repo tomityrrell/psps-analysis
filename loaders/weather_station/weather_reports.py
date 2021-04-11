@@ -3,8 +3,7 @@ import json
 
 import pandas as pd
 
-with open('./loaders/weather_station/cimis_api_key', 'r') as f:
-    appKey = f.readline().strip()
+from cimis_api_key import appKey
 
 # stations = "6"
 # stations = "6,  28,  58,  74,  98, 198, 217, 238, 250, 251, 255"
@@ -14,9 +13,11 @@ with open('./loaders/weather_station/cimis_api_key', 'r') as f:
 address = "http://et.water.ca.gov/api/data?appKey={}&targets={}&startDate={}&endDate={}&dataItems=hly-air-tmp,hly-dew-pnt,hly-eto,hly-net-rad,hly-asce-eto,hly-asce-etr,hly-precip,hly-rel-hum,hly-res-wind,hly-soil-tmp,hly-sol-rad,hly-vap-pres,hly-wind-dir,hly-wind-spd&unitOfMeasure=E"
 
 
-def weather_station_query(queries, save=False):
+def weather_station_query(queries, save=False, verbose=True):
     query_dfs = []
     for (station, startDate, endDate) in queries:
+        if verbose:
+            print("Querying", station, startDate, endDate)
         r = requests.get(address.format(appKey, station, startDate, endDate))
         j = json.loads(r.content)
 

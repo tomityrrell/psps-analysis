@@ -1,6 +1,6 @@
 **/venv/*
 **/.idea/*
-/loaders/weather_station/cimis_api_key
+/loaders/weather_station/cimis_api_key.py
 .DS_Store
 **/__pycache__/
 **/.ipynb_checkpoints/
