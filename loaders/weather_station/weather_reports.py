@@ -3,7 +3,6 @@ import json
 
 import pandas as pd
 
-
 with open('cimis_api_key', 'r') as f:
     appKey = f.readline()
 
