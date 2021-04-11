@@ -1,5 +1,6 @@
-/loaders/psps_report/venv/*
-/loaders/psps_report/.idea/*
-.idea/*
+**/venv/*
+**/.idea/*
 /loaders/weather_station/cimis_api_key
 .DS_Store
+**/__pycache__/
+**/.ipynb_checkpoints/
