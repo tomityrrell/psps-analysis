@@ -18,8 +18,13 @@ def weather_station_query(queries, save=False, verbose=True):
     for (station, startDate, endDate) in queries:
         if verbose:
             print("Querying", station, startDate, endDate)
-        r = requests.get(address.format(appKey, station, startDate, endDate))
-        j = json.loads(r.content)
+        
+        try:
+            r = requests.get(address.format(appKey, station, startDate, endDate))
+            j = json.loads(r.content)
+        except json.JSONDecodeError:
+            print("Failed to retrieve query:", station, startDate, endDate)
+            continue
 
         query = j["Data"]["Providers"][0]["Records"]
         query_dfs.append(pd.DataFrame(query))
