@@ -1,3 +1,4 @@
+import time
 import requests
 import json
 
@@ -39,6 +40,6 @@ def weather_station_query(queries, save=False, verbose=True):
     data_df.rename(columns={c: cu for (c, cu) in zip(hly_cols, hly_cols_units)}, inplace=True)
 
     if save:
-        data_df.to_csv("./data/weather/weather_report_{}.csv".format(str(queries)), index=False)
+        data_df.to_csv("./data/weather/weather_report_{}.csv".format(time.time()), index=False)
 
     return data_df
