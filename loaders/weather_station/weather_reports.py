@@ -23,12 +23,15 @@ def weather_station_query(queries, save=False, verbose=True):
         try:
             r = requests.get(address.format(appKey, station, startDate, endDate))
             j = json.loads(r.content)
-        except json.JSONDecodeError:
-            print("Failed to retrieve query:", station, startDate, endDate)
-            continue
 
-        query = j["Data"]["Providers"][0]["Records"]
-        query_dfs.append(pd.DataFrame(query))
+            query = j["Data"]["Providers"][0]["Records"]
+            query_dfs.append(pd.DataFrame(query))
+        except json.JSONDecodeError:
+            print("Failed to retrieve query due to JSON error:", station, startDate, endDate)
+            continue
+        except TypeError:
+            print("Failed to retrieve query due to Type error:", station, startDate, endDate)
+            continue
 
     data_df = pd.concat(query_dfs)
 
@@ -40,6 +43,6 @@ def weather_station_query(queries, save=False, verbose=True):
     data_df.rename(columns={c: cu for (c, cu) in zip(hly_cols, hly_cols_units)}, inplace=True)
 
     if save:
-        data_df.to_csv("./data/weather/weather_report_{}.csv".format(time.time()), index=False)
+        data_df.to_csv("../../data/weather/weather_report_{}.csv".format(time.time()), index=False)
 
     return data_df
