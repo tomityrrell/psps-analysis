@@ -32,6 +32,9 @@ def weather_station_query(queries, save=False, verbose=True):
         except TypeError:
             print("Failed to retrieve query due to Type error:", station, startDate, endDate)
             continue
+        except Exception:
+            print("Failed to retrieve query due to error:", station, startDate, endDate)
+            continue
 
     data_df = pd.concat(query_dfs)
 
@@ -43,6 +46,9 @@ def weather_station_query(queries, save=False, verbose=True):
     data_df.rename(columns={c: cu for (c, cu) in zip(hly_cols, hly_cols_units)}, inplace=True)
 
     if save:
-        data_df.to_csv("../../data/weather/weather_report_{}.csv".format(time.time()), index=False)
+        try:
+            data_df.to_csv("../../data/weather/weather_report_{}.csv".format(time.time()), index=False)
+        finally:
+            pass
 
     return data_df
