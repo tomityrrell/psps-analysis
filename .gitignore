@@ -1,7 +1,13 @@
 **/venv/*
 **/.idea/*
-/loaders/cimis/cimis_api_key.py
 .DS_Store
 **/__pycache__/
 **/.ipynb_checkpoints/
-tods/
+/tods/
+/loaders/cimis/cimis_api_key.py
+/data/metrics/old/
+/data/2020
+/data/2021
+/data/sims
+/data/weather/old
+/models/old
