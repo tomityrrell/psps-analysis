@@ -75,11 +75,12 @@ max_wind_layer = pdk.Layer(
                     get_position=["Longitude", "Latitude"],
                     get_elevation="WindSpd",
                     elevation_scale=1000,
-                    get_radius=1000,
-                    get_fill_color=["WindSpd > 20 ? 255 : 0", "WindSpd > 25 ? 0 : 255", 0, 128],
+                    get_radius=1,
+                    get_coverage=.5,
+                    get_fill_color=["WindSpd > 20 ? 255 : 0", "WindSpd > 25 ? 0 : 255", 0, 200],
                     auto_highlight=True,
                     pickable=True,
-                    # extruded=True
+                    extruded=True
                 )
 
 tooltip = {
@@ -89,7 +90,9 @@ tooltip = {
 deck = pdk.Deck(
         layers=[max_wind_layer],
         initial_view_state=initial_view,
-        tooltip=tooltip
+        tooltip=tooltip,
+        # map_provider="mapbox",
+        # map_style="satellite"
     )
 
 deck.to_html("./map.html")
