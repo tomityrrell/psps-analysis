@@ -4,7 +4,7 @@ import json
 
 import pandas as pd
 
-from cimis_api_key import appKey
+from cimis.cimis_api_key import appKey
 
 # stations = "6"
 # stations = "6,  28,  58,  74,  98, 198, 217, 238, 250, 251, 255"

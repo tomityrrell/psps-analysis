@@ -12,3 +12,4 @@
 /data/weather/old
 /models/old
 loaders/weather_station/cimis_api_key.py
+loaders/mesowest/mesowest_token.py
