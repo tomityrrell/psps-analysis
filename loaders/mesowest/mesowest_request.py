@@ -1,6 +1,8 @@
 import requests
 import os
 
+import pandas as pd
+
 from mesowest_token import API_TOKEN
 
 API_ROOT = "https://api.synopticdata.com/v2/"
@@ -19,4 +21,6 @@ def mesowest_req(start="202101180000", end="202101220000"):
     }
 
     req = requests.get(api_request_url, params=api_arguments)
-    return req
+    df = pd.DataFrame(req.json()["STATION"])
+    df.to_csv("./sce_{}_{}.csv".format(start, end))
+    return req, df
