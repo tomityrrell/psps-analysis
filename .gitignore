@@ -9,6 +9,7 @@
 /data/2020
 /data/2021
 /data/sims
+/data/weather/weater_report_DecJan.csv
 /data/weather/old
 /models/old
 loaders/weather_station/cimis_api_key.py
