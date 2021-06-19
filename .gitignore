@@ -14,3 +14,11 @@
 /models/old
 loaders/weather_station/cimis_api_key.py
 loaders/mesowest/mesowest_token.py
+loaders/mesowest/sce_15_18.csv
+loaders/mesowest/sce_18_21.csv
+loaders/mesowest/sce_202101120000_202101150000.csv
+loaders/mesowest/sce_202101150000_202101180000.csv
+loaders/mesowest/sce_202101180000_202101210000.csv
+loaders/mesowest/sce_202101150000_202101180000.csv
+loaders/mesowest/sce_202101150000_202101180000.csv
+loaders/mesowest/sce.csv

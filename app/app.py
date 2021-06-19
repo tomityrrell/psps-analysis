@@ -7,38 +7,69 @@ import streamlit as st
 # DATA
 #
 
+
 # Import psps data
-source = pd.read_csv("../data/source.csv", parse_dates=["start", "end"])
+@st.cache()
+def get_psps_data():
+    source = pd.read_csv("../data/source.csv", parse_dates=["start", "end"])
 
-# Start/End Dates for recent PSPS events
-se_dates = source[["start", "end"]]
-se_dates = se_dates[~se_dates.duplicated()].sort_values(by="start")
-se_dates["label"] = se_dates.start.astype("str") + " - " + se_dates.end.astype("str")
-se_dates.set_index("label", inplace=True)
+    # Start/End Dates for recent PSPS events
+    se_dates = source[["start", "end"]]
+    se_dates = se_dates[~se_dates.duplicated()].sort_values(by="start")
+    se_dates["label"] = se_dates.start.astype("str") + " - " + se_dates.end.astype("str")
+    se_dates.set_index("label", inplace=True)
 
-# Import weather station data
+    return source, se_dates
 
-# CIMIS
-ws = pd.read_csv("../data/weather/weather_stations.csv", parse_dates=True)
-ws.dropna(axis=1, how="any", inplace=True)
-ws.dropna(axis=0, how="any", inplace=True)
-ws.rename(columns={"StationNbr": "Station"}, inplace=True)
-ws.set_index("Station", inplace=True)
+source, se_dates = get_psps_data()
+
+# Import CIMIS weather station/report data
+@st.cache()
+def get_cimis_data():
+    ws = pd.read_csv("../data/weather/weather_stations.csv", parse_dates=True)
+    ws.dropna(axis=1, how="any", inplace=True)
+    ws.dropna(axis=0, how="any", inplace=True)
+    ws.rename(columns={"StationNbr": "Station"}, inplace=True)
+    ws.set_index("Station", inplace=True)
+
+    wr = pd.read_csv("../data/weather/weather_report.csv", parse_dates=["Date"])
+    wr = wr[(wr.Date >= "2020-12-01") & (wr["HlyWindSpd (MPH)"] < 100) & (wr["HlyRelHum (%)"] > 0)]
+    wr.set_index(["Station", "Time"], inplace=True)
+
+    return ws, wr
+
+ws, wr = get_cimis_data()
 
 # Midpoint for Visualizations
 midpoint = ws[["Latitude", "Longitude"]].mean().values
 
-# SCE
-ws_mw = pd.read_csv("../loaders/mesowest/janpsps.csv")
+# Import SCE data
+@st.cache()
+def get_sce_data():
+    wr_mw = pd.read_csv("../loaders/mesowest/sce.csv", parse_dates = ["Time", "Period_Of_Record.Start", "Period_Of_Record.End"])
+    wr_mw["Date"] = wr_mw.Time.dt.date
+    wr_mw.rename(columns={"GustSpeed": "GustSpd", "WindSpeed": "WindSpd"}, inplace=True)
 
-# Import weather report data
-wr = pd.read_csv("../data/weather/weather_report.csv", parse_dates=["Date"])
-wr = wr[(wr.Date >= "2020-12-01") & (wr["HlyWindSpd (MPH)"] < 100) & (wr["HlyRelHum (%)"] > 0)]
-wr.set_index(["Station", "Time"], inplace=True)
+    ws_mw = wr_mw[["Station", "Name", "Latitude", "Longitude"]]
+    ws_mw = ws_mw[~ws_mw.duplicated()]
 
-# Import crossing metrics
-crossings = pd.read_csv("../data/metrics/summaries/crossings_Jan19_24.csv")
-crossings.rename(columns={"Prob of Crossing": "Crossing_Prob", "Actual Crossing Count": "Crossing_Count"}, inplace=True)
+    ws_mw.set_index("Station", inplace=True)
+    wr_mw.set_index(["Station", "Time"], inplace=True)
+
+    return ws_mw, wr_mw
+
+ws_mw, wr_mw = get_sce_data()
+
+
+# Import model output data
+@st.cache()
+def get_model_outputs():
+    crossings = pd.read_csv("../data/metrics/summaries/crossings_Jan19_24.csv")
+    crossings.rename(columns={"Prob of Crossing": "Crossing_Prob", "Actual Crossing Count": "Crossing_Count"}, inplace=True)
+
+    return crossings
+
+crossings = get_model_outputs()
 
 #
 # SIDEBAR
@@ -46,15 +77,19 @@ crossings.rename(columns={"Prob of Crossing": "Crossing_Prob", "Actual Crossing 
 
 st.sidebar.subheader("Options")
 
-option = st.sidebar.radio("Views", ["Networks", "PSPS Events", "Wind/Humidity Warnings - Jan 19th, 2021"])
+option = st.sidebar.radio("Views", ["MesoWest Networks", "PSPS Events", "Wind/Humidity Warnings - Jan 19th, 2021"])
 
 network, select_psps_date = "", ""
-if option == "View Networks":
+if option == "MesoWest Networks":
     network = st.sidebar.selectbox("MesoWest Networks", ["CIMIS", "SCE"])
 
-if option == "View PSPS Events":
+if option == "PSPS Events":
     # PSPS Drop-down
     select_psps_date = st.sidebar.selectbox("PSPS Events", se_dates[se_dates.start >= "2020-12-04"].index)
+    psps_network = "CIMIS"
+
+    if "01-12" in select_psps_date:
+        psps_network = st.sidebar.radio("Network", ["CIMIS", "SCE"])
 
 #
 # APP
@@ -69,7 +104,7 @@ if network:
         weather_stations = ws
         radius = 2500
     elif network == "SCE":
-        weather_stations = ws_mw[["Station", "Name", "Latitude", "Longitude"]].dropna()
+        weather_stations = ws_mw
         radius = 1000
 
     midpoint = weather_stations[["Latitude", "Longitude"]].mean().values
@@ -88,7 +123,7 @@ if network:
     tooltip = {
         "html": "<b>{Name}</b>"
     }
-elif select_psps_date:
+elif select_psps_date and psps_network == "CIMIS":
     psps_date = se_dates.loc[select_psps_date]
 
     idx_wind_max = wr[(wr.Date >= psps_date.start) & (wr.Date <= psps_date.end)].groupby("Station")["HlyWindSpd (MPH)"].idxmax()
@@ -131,6 +166,52 @@ elif select_psps_date:
     tooltip = {
         "html": "<b>{Name}</b> - <b> {MaxTime}</b> <br> "
                 "<b>{WindSpd}</b> MPH max wind observed <br> "
+                "<b>{RelHum}</b> % relative humidity observed"
+    }
+elif select_psps_date and psps_network == "SCE":
+    psps_date = se_dates.loc[select_psps_date]
+
+    wr = wr_mw
+    ws = ws_mw
+    idx_wind_max = wr[(wr.Date >= psps_date.start) & (wr.Date <= psps_date.end)].groupby("Station")["GustSpd"].idxmax()
+    idx_wind_max.dropna(inplace=True)
+
+    extreme_values = wr.loc[idx_wind_max, ["RelHum", "GustSpd"]]
+    extreme_values["MaxTime"] = extreme_values.index.get_level_values(1)
+
+    ws_data = ws.merge(extreme_values.droplevel(1), on="Station")
+
+    wind_layer = pdk.Layer(
+                        type='ColumnLayer',
+                        data=ws_data,
+                        get_position=["Longitude", "Latitude"],
+                        get_elevation="GustSpd",
+                        elevation_scale=1000,
+                        # get_radius=1000,
+                        get_fill_color=["GustSpd > 25 ? 255 : 0", "GustSpd > 45 ? 0 : 255", 0, 200],
+                        auto_highlight=True,
+                        pickable=True,
+                        extruded=True
+                    )
+
+    hum_layer = pdk.Layer(
+                        type='ColumnLayer',
+                        data=ws_data,
+                        get_position=["Longitude", "Latitude"],
+                        get_elevation="RelHum",
+                        elevation_scale=100,
+                        # radius=1000,
+                        offset=[1.414, 1.414],
+                        get_fill_color=["RelHum < 10 ? 255 : 0", "RelHum < 17 ? 0 : 255", 0, 200],
+                        auto_highlight=True,
+                        pickable=True,
+                        extruded=True
+                    )
+
+    layers = [wind_layer, hum_layer]
+    tooltip = {
+        "html": "<b>{Name}</b> - <b>{MaxTime}</b> <br> "
+                "<b>{GustSpd}</b> MPH max gust observed <br> "
                 "<b>{RelHum}</b> % relative humidity observed"
     }
 elif "Warning" in option:
