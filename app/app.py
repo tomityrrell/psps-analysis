@@ -46,12 +46,12 @@ midpoint = ws[["Latitude", "Longitude"]].mean().values
 # Import SCE data
 @st.cache()
 def get_sce_data():
-    wr_mw = pd.read_csv("../loaders/mesowest/sce.csv", parse_dates = ["Time", "Period_Of_Record.Start", "Period_Of_Record.End"])
-    wr_mw["Date"] = wr_mw.Time.dt.date
-    wr_mw.rename(columns={"GustSpeed": "GustSpd", "WindSpeed": "WindSpd"}, inplace=True)
+    wr_mw = pd.read_csv("../loaders/mesowest/sce.csv", parse_dates=["Time", "Date", "Period_Of_Record.Start", "Period_Of_Record.End"])
+    # wr_mw["Date"] = wr_mw.Time.dt.date
+    # wr_mw.rename(columns={"GustSpeed": "GustSpd", "WindSpeed": "WindSpd"}, inplace=True)
 
     ws_mw = wr_mw[["Station", "Name", "Latitude", "Longitude"]]
-    ws_mw = ws_mw[~ws_mw.duplicated()]
+    ws_mw = ws_mw[~ws_mw.duplicated(subset="Station")]
 
     ws_mw.set_index("Station", inplace=True)
     wr_mw.set_index(["Station", "Time"], inplace=True)
@@ -67,9 +67,11 @@ def get_model_outputs():
     crossings = pd.read_csv("../data/metrics/summaries/crossings_Jan19_24.csv")
     crossings.rename(columns={"Prob of Crossing": "Crossing_Prob", "Actual Crossing Count": "Crossing_Count"}, inplace=True)
 
-    return crossings
+    predictions = pd.read_csv("../data/predictions/predictions_24hr_jan19.csv")
 
-crossings = get_model_outputs()
+    return crossings, predictions
+
+crossings, predictions = get_model_outputs()
 
 #
 # SIDEBAR
@@ -173,11 +175,12 @@ elif select_psps_date and psps_network == "SCE":
 
     wr = wr_mw
     ws = ws_mw
-    idx_wind_max = wr[(wr.Date >= psps_date.start) & (wr.Date <= psps_date.end)].groupby("Station")["GustSpd"].idxmax()
-    idx_wind_max.dropna(inplace=True)
 
-    extreme_values = wr.loc[idx_wind_max, ["RelHum", "GustSpd"]]
-    extreme_values["MaxTime"] = extreme_values.index.get_level_values(1)
+    idx_wind_max = wr[(wr.Date >= psps_date.start) & (wr.Date <= psps_date.end)].groupby("Station")["WindSpd"].idxmax()
+    idx_wind_max.dropna(inplace=True)
+    
+    extreme_values = wr.loc[idx_wind_max, ["WindSpd", "RelHum"]]
+    extreme_values["MaxTime"] = pd.to_datetime(extreme_values.index.get_level_values(1)).astype("<M8[ns]")
 
     ws_data = ws.merge(extreme_values.droplevel(1), on="Station")
 
@@ -185,10 +188,10 @@ elif select_psps_date and psps_network == "SCE":
                         type='ColumnLayer',
                         data=ws_data,
                         get_position=["Longitude", "Latitude"],
-                        get_elevation="GustSpd",
+                        get_elevation="WindSpd",
                         elevation_scale=1000,
                         # get_radius=1000,
-                        get_fill_color=["GustSpd > 25 ? 255 : 0", "GustSpd > 45 ? 0 : 255", 0, 200],
+                        get_fill_color=["WindSpd > 15 ? 255 : 0", "WindSpd > 25 ? 0 : 255", 0, 200],
                         auto_highlight=True,
                         pickable=True,
                         extruded=True
@@ -211,12 +214,12 @@ elif select_psps_date and psps_network == "SCE":
     layers = [wind_layer, hum_layer]
     tooltip = {
         "html": "<b>{Name}</b> - <b>{MaxTime}</b> <br> "
-                "<b>{GustSpd}</b> MPH max gust observed <br> "
+                "<b>{WindSpd}</b> MPH max wind observed <br> "
                 "<b>{RelHum}</b> % relative humidity observed"
     }
 elif "Warning" in option:
     ws_data = ws.merge(crossings, on="Station")
-    ws_data
+    # ws_data
 
     crossings_layer = pdk.Layer(
         type='ColumnLayer',
@@ -254,5 +257,6 @@ deck = pdk.Deck(
 
 st.pydeck_chart(deck)
 
-# deck.to_html("./map.html")
+if st.button("Save map"):
+    deck.to_html("map_{}.html".format(option.replace("/", "")))
 
