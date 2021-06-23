@@ -46,7 +46,8 @@ midpoint = ws[["Latitude", "Longitude"]].mean().values
 # Import SCE data
 @st.cache()
 def get_sce_data():
-    wr_mw = pd.read_csv("../loaders/mesowest/sce.csv", parse_dates=["Time", "Date", "Period_Of_Record.Start", "Period_Of_Record.End"])
+    wr_mw = pd.read_csv("../loaders/mesowest/sce.csv", parse_dates=["Date"])
+    # wr_mw.Time = wr_mw.Time.dt.tz_localize(None)
     # wr_mw["Date"] = wr_mw.Time.dt.date
     # wr_mw.rename(columns={"GustSpeed": "GustSpd", "WindSpeed": "WindSpd"}, inplace=True)
 
@@ -180,7 +181,7 @@ elif select_psps_date and psps_network == "SCE":
     idx_wind_max.dropna(inplace=True)
     
     extreme_values = wr.loc[idx_wind_max, ["WindSpd", "RelHum"]]
-    extreme_values["MaxTime"] = pd.to_datetime(extreme_values.index.get_level_values(1)).astype("<M8[ns]")
+    extreme_values["MaxTime"] = extreme_values.index.get_level_values(1)
 
     ws_data = ws.merge(extreme_values.droplevel(1), on="Station")
 
