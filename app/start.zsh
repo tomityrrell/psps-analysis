@@ -1,0 +1,1 @@
+streamlit run app.py --mapbox.token pk.eyJ1IjoidG9taXR5cnJlbGwiLCJhIjoiY2tweXI3aG83MDJuejJ2cnB2N2lnczNjdiJ9.5y1CPx83w9DHbCcaJNHqdA
