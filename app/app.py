@@ -46,7 +46,7 @@ midpoint = ws[["Latitude", "Longitude"]].mean().values
 # Import SCE data
 @st.cache()
 def get_sce_data():
-    wr_mw = pd.read_csv("../loaders/mesowest/sce.csv", parse_dates=["Date"])
+    wr_mw = pd.read_csv("../data/sce.csv", parse_dates=["Date"])
     # wr_mw.Time = wr_mw.Time.dt.tz_localize(None)
     # wr_mw["Date"] = wr_mw.Time.dt.date
     # wr_mw.rename(columns={"GustSpeed": "GustSpd", "WindSpeed": "WindSpd"}, inplace=True)
@@ -190,7 +190,7 @@ elif select_psps_date and psps_network == "SCE":
                         data=ws_data,
                         get_position=["Longitude", "Latitude"],
                         get_elevation="WindSpd",
-                        elevation_scale=1000,
+                        elevation_scale=1000.69,
                         # get_radius=1000,
                         get_fill_color=["WindSpd > 15 ? 255 : 0", "WindSpd > 25 ? 0 : 255", 0, 200],
                         auto_highlight=True,
